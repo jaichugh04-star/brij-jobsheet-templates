@@ -184,6 +184,22 @@
             margin-top: 15px;
         }
         
+        .image-section {
+            margin-top: 30px;
+            padding: 15px 0;
+            page-break-inside: avoid;
+        }
+        
+        .image-section img {
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            object-fit: contain;
+        }
+        
         @media print {
             body {
                 padding: 10px;
@@ -191,6 +207,17 @@
             
             .department-section {
                 page-break-before: always;
+            }
+            
+            .image-section {
+                page-break-inside: avoid;
+                page-break-after: auto;
+            }
+            
+            .image-section img {
+                max-width: 100%;
+                max-height: 800px;
+                object-fit: contain;
             }
         }
     </style>
@@ -572,6 +599,10 @@
                 <p>___________________________</p>
             </div>
         </div>
+    </div>
+
+    <div class="image-section" id="image-section" style="display: none;">
+        <img src="" alt="Job Sheet Image" id="job-sheet-image">
     </div>
 </body>
 </html>
